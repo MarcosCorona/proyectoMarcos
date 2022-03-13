@@ -1,0 +1,64 @@
+<odoo>
+    <record id="tiendas.dniT_report" model="ir.actions.report">
+        <field name="name">Informe trabajadores por tienda</field>
+        <field name="model">tiendas.trabajador</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">tiendas.trabajador_report_view</field>
+        <field name="report_file">proyectos.trabajador_report</field>
+        <field name="binding_model_id" ref="model_proyectos_departamento"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <template id="trabajador_report_view">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="trabajador">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2>INFORME</h2>
+                        <h3 t-field="trabajador.dniTrabajador"/>
+
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th>Tienda</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha de nacimiento</th>
+                                    <th>Edad</th>
+                                    <th>Correo</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <t t-foreach="departamento.empleado_id" t-as="empleado">
+                                    <tr>
+                                        <td>
+                                            <span t-field="trabajador.tienda_id.nombreTienda"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="trabajador.nombreTrabajador"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="trabajador.fechaNacimiento"/>
+                                        </td>
+                                         <td>
+                                            <span t-field="trabajador.edad"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="trabajador.correoTrabajador"/>
+                                        </td>
+                                    </tr>
+
+                                </t>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </t>
+            </t>
+
+        </t>
+
+    </template>
+
+</odoo>
