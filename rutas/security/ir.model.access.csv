@@ -1,6 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_rutas_rutas,rutas.rutas,model_rutas_rutas,base.group_user,1,1,1,1
-access_rutas_ruta_role1,rutas.ruta.role1,model_rutas_ruta,tiendas.group_rutas_role1,1,1,1,1
+access_rutas_ruta_role1,rutas.ruta.role1,model_rutas_ruta,rutas.group_tiendas_role1,1,1,1,1
 access_rutas_camion_role1,rutas.camion.role1,model_rutas_camion,rutas.group_rutas_role1,1,0,0,0
 access_rutas_camion_role2,rutas.camion.role2,model_rutas_camion,rutas.group_rutas_role2,1,1,1,1
 
