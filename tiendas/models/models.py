@@ -16,8 +16,8 @@ class tienda(models.Model):
     #validacion
     @api.constrains('idTienda')
     def _checkId(self):
-        for tienda in self:
-            if (tienda.idTienda == this.tienda.idTienda):
+        for tienda1 in self:
+            if (tienda1.idTienda == tienda.idTienda):
                 raise exceptions.ValidationError("Ya existe esa tienda, por favor, cambie el id")
     
 
