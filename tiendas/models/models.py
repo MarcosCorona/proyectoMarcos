@@ -13,6 +13,12 @@ class tienda(models.Model):
     direccionTienda = fields.Char(string='Direccion tienda ',required=True)
     #relaccion 
     trabajador_id = fields.One2many('tiendas.trabajador','tienda_id', string='Trabajador')
+    #validacion
+    @api.constrains('idTienda')
+    def _checkId(self):
+        for tienda in self:
+            if (tienda.idTienda == this.tienda.idTienda):
+                raise exceptions.ValidationError("Ya existe esa tienda, por favor, cambie el id")
     
 
 class trabajador(models.Model):
