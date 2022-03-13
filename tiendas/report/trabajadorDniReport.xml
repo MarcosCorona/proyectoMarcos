@@ -15,7 +15,7 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>INFORME</h2>
-                        <h3 t-field="trabajador.dniTrabajador"/>
+                        <h3 t-field="tienda.nombreTienda"/>
 
                         <table class="table table-sm o_main_table">
                             <thead>
@@ -29,7 +29,7 @@
                             </thead>
 
                             <tbody>
-                                <t t-foreach="trabajador.tienda_id" t-as="trabajador">
+                                <t t-foreach="tienda.trabajador_id" t-as="trabajador">
                                     <tr>
                                         <td>
                                             <span t-field="trabajador.dniTrabajador"/>
