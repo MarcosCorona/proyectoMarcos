@@ -11,7 +11,7 @@ class ruta(models.Model):
     idRuta = fields.Integer(string='Id ', required=True)
     dirSalida = fields.Char(string='Comienzo ruta:  ',required=True)
     dirEntrega = fields.Char(string='Fin ruta: ',required=True)
-    tipoViaje = fields.Selection(string='Tipo viaje', selection=[('Viaje corto'), ('Viaje medio'),('Viaje largo.')], required=True)
+    tipoViaje = fields.Selection(string='Tipo viaje', selection=[('a', 'Viaje corto'), ('b','Viaje medio'),('c','Viaje largo.')], required=True)
     #relaccion 
     #camion_id = fields.Many2many('rutas.camion',string='Camiones:')
 
