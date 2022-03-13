@@ -27,4 +27,10 @@ class camion(models.Model):
     ruta_ids = fields.Many2many('rutas.ruta',string='Rutas:')
     trabajador_id = fields.One2many('tiendas.trabajador','camion_id', string='Trabajador')
     #validacion
+    @api.constrains('numBastidor')
+    def _checkDNI(self):
+        for camion in self:
+            if (len(camion.numBastidor) < 9):
+                raise exceptions.ValidationError("El Nº bastidor no puede tener menos de 6 caracteres.")
+
 

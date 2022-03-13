@@ -25,6 +25,46 @@
 			  </tree>
 		  </field>
 	  </record>
+
+	  <!-- VISTAS FORMULARIOS -->
+    <record model="ir.ui.view" id="rutas.camion_view">
+      <field name="name">rutas.camion.view.tree</field>
+      <field name="model">rutas.camion</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <div class="oe_button_box">
+              <BUTTONS/>
+            </div>
+            <group>
+              <group>
+                <h1>VISTA CAMIONES</h1>
+              </group>
+            </group>
+            <notebook>
+              <page string="Página 1">
+                <group>
+                  <field name="matricula"/>
+                </group>
+                <group>
+                  <field name="trabajador_id" />
+                </group>
+                <group col="2">
+                  <field name="idCamion" style="width:10%%"/>
+                  <field name="numBastidor" style="width:10%%"/>
+				  <field name="ruta_ids" style="width:10%%"/>
+                </group>
+              </page>
+              <page string="Página 2">
+                <group>
+                  <CONTENT/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
 	
 	<record model="ir.actions.act_window" id="rutas.ruta_action_window">
 		<field name="name">Rutas</field>
