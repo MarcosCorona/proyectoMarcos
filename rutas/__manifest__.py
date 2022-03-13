@@ -37,5 +37,5 @@
         'demo/demo.xml',
     ],
 
-    'application':True ,
+ 
 }
