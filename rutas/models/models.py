@@ -21,10 +21,10 @@ class camion(models.Model):
 
     #atributos
     idCamion = fields.Char(string='ID:',required=True)
-    numBastidor = fields.Char(string='Nº bastidor',required=True)
+    numBastidor = fields.Char(string='Nï¿½ bastidor',required=True)
     matricula = fields.Char(string='Matricula',required=True)
     #relaccion
     ruta_ids = fields.Many2many('rutas.camion',string='Rutas:')
-    #trabajador_id = fields.Many2one('tiendas.trabajador',String="Trabajadores:")
+    trabajador_id = fields.Many2one('tiendas.trabajador',String="Trabajadores:")
     #validacion
 
