@@ -1,5 +1,5 @@
 <odoo>
-    <record id="tiendas.dniT_report" model="ir.actions.report">
+    <record id="tiendas.trabajadorDniReport" model="ir.actions.report">
         <field name="name">Informe trabajadores por tienda</field>
         <field name="model">tiendas.trabajador</field>
         <field name="report_type">qweb-pdf</field>
