@@ -63,9 +63,9 @@
                   <field name="trabajador_id" />
                 </group>
                 <group col="2">
-                  <field name="idCamion" style="width:10%%"/>
-                  <field name="numBastidor" style="width:10%%"/>
-				  <field name="ruta_ids"/>
+                  <field name="idCamion" />
+                  <field name="numBastidor" />
+				          <field name="ruta_ids"/>
                 </group>
               </page>
             </notebook>
