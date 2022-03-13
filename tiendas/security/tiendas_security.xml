@@ -1,0 +1,24 @@
+<?xml version ="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+
+		<record model="ir.module.category" id="tiendas.module_category_tiendas">
+			<field name="name">Tiendas</field>
+			<field name="description">Gestion y asignacion de tiendas y sus trabajadores.</field>
+		</record>
+		
+		<record model="res.groups" id="group_tiendas_role2">
+			<field name="name">role2</field>
+			<field name="category_id" ref="tiendas.module_category_tiendas"/>
+			<field name="comment">role2</field>
+		</record>
+		
+		<record model="res.groups" id="group_tiendas_role1">
+			<field name="name">role1</field>
+			<field name="category_id" ref="tiendas.module_category_tiendas"/>
+			<field name="comment">role1</field>
+			<field name="implied_ids" eval="[(4, ref('group_tiendas_role2'))]"/>
+			<field name="users" eval="[(4, ref('base.user_root')),(4, ref('base.user_admin'))]"/>
+		</record>
+	</data>
+</odoo>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tiendas_trabajador_role1,tiendas.trabajador.role1,model_tiendas_trabajador,tiendas.group_tiendas_role1,1,1,1,1
+access_tiendas_tienda_role1,tiendas.tienda.role1,model_tiendas_tienda,tiendas.group_tiendas_role1,1,1,1,1

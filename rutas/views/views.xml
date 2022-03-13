@@ -1,0 +1,46 @@
+<odoo>
+  <data>
+	  <!-- VISTA RUTAS -->
+	  <record model="ir.ui.view" id="rutas.ruta_list_view">
+		  <field name="name">rutas.ruta.view.tree</field>
+		  <field name="model">rutas.ruta</field>
+		  <field name="arch" type="xml">
+			  <tree>
+				  <field name="idRuta"/>
+				  <field name="dirSalida"/>
+				  <field name="dirEntrega"/>
+				  <field name="tipoViaje"/>
+			  </tree>
+		  </field>
+	  </record>
+	  <!-- VISTA CAMION -->
+	  <record model="ir.ui.view" id="rutas.camion_list_view">
+		  <field name="name">rutas.camion.view.tree</field>
+		  <field name="model">rutas.camion</field>
+		  <field name="arch" type="xml">
+			  <tree>
+				  <field name="idCamion"/>
+				  <field name="numBastidor"/>
+				  <field name="matricula"/>
+			  </tree>
+		  </field>
+	  </record>
+	
+	<record model="ir.actions.act_window" id="rutas.ruta_action_window">
+		<field name="name">Rutas</field>
+		<field name="res_model">rutas.ruta</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="rutas.camion_action_window">
+		<field name="name">Camiones</field>
+		<field name="res_model">rutas.camion</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem name="Rutas" id="rutas.menu_root"/>
+
+	<menuitem name="Ruta" id="rutas.ruta_menu" parent="rutas.menu_root" action="rutas.ruta_action_window"/>
+	<menuitem name="Camion" id="rutas.camion_menu" parent="rutas.menu_root" action="rutas.camion_action_window"/>
+  </data>
+</odoo>

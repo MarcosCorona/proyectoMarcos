@@ -1,0 +1,47 @@
+<odoo>
+  <data>
+	  <!-- VISTA TRABAJADORES -->
+	  <record model="ir.ui.view" id="tiendas.trabajador_list_view">
+		  <field name="name">tiendas.trabajador.view.tree</field>
+		  <field name="model">tiendas.trabajador</field>
+		  <field name="arch" type="xml">
+			  <tree>
+				  <field name="dniTrabajador"/>
+				  <field name="nombreTrabajador"/>
+				  <field name="correoTrabajador"/>
+				  <field name="fechaNacimiento"/>
+			  </tree>
+		  </field>
+	  </record>
+	  <!-- VISTA TIENDA -->
+	  <record model="ir.ui.view" id="tiendas.tienda_list_view">
+		  <field name="name">tiendas.tienda.view.tree</field>
+		  <field name="model">tiendas.tienda</field>
+		  <field name="arch" type="xml">
+			  <tree>
+				  <field name="idTienda"/>
+				  <field name="nombreTienda"/>
+				  <field name="direccionTienda"/>
+			  </tree>
+		  </field>
+	  </record>
+
+	
+	<record model="ir.actions.act_window" id="tiendas.trabajador_action_window">
+		<field name="name">Trabajadores</field>
+		<field name="res_model">tiendas.trabajador</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="tiendas.tienda_action_window">
+		<field name="name">Tiendas</field>
+		<field name="res_model">tiendas.tienda</field>
+		<field name="view_mode">tree,form</field>
+	</record>
+
+	<menuitem name="tiendas" id="tiendas.menu_root"/>
+
+	<menuitem name="Trabajadores" id="tiendas.trabajador_menu" parent="tiendas.menu_root" action="tiendas.trabajador_action_window"/>
+	<menuitem name="Tienda" id="tiendas.tienda_menu" parent="tiendas.menu_root" action="tiendas.tienda_action_window"/>
+  </data>
+</odoo>
