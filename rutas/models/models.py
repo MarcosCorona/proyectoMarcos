@@ -25,6 +25,6 @@ class camion(models.Model):
     matricula = fields.Char(string='Matricula',required=True)
     #relaccion
     ruta_ids = fields.Many2many('rutas.ruta',string='Rutas:')
-    trabajador_id = fields.One2one('tiendas.trabajador',String="Trabajadores:")
+    trabajador_id2 = fields.Many2one('tiendas.trabajador', string='Trabajador')
     #validacion
 
