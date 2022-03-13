@@ -13,7 +13,7 @@ class ruta(models.Model):
     dirEntrega = fields.Char(string='Fin ruta: ',required=True)
     tipoViaje = fields.Selection(string='Tipo viaje', selection=[('a', 'Viaje corto'), ('b','Viaje medio'),('c','Viaje largo.')], required=True)
     #relaccion 
-    #camion_id = fields.Many2many('rutas.camion',string='Camiones:')
+    camion_id = fields.Many2many('rutas.camion',string='Camiones:')
 
 class camion(models.Model):
     _name = 'rutas.camion'
@@ -24,7 +24,7 @@ class camion(models.Model):
     numBastidor = fields.Char(string='N� bastidor',required=True)
     matricula = fields.Char(string='Matricula',required=True)
     #relaccion
-    #ruta_ids = fields.Many2many('rutas.camion',string='Rutas:')
+    ruta_ids = fields.Many2many('rutas.camion',string='Rutas:')
     trabajador_id = fields.Many2one('tiendas.trabajador',String="Trabajadores:")
     #validacion
 
