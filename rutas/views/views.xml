@@ -56,8 +56,16 @@
                 </group>
               </page>
               <page string="Página 2">
+             	<group>
+                  <field name="matricula"/>
+                </group>
                 <group>
-                  <CONTENT/>
+                  <field name="trabajador_id" />
+                </group>
+                <group col="2">
+                  <field name="idCamion" style="width:10%%"/>
+                  <field name="numBastidor" style="width:10%%"/>
+				  <field name="ruta_ids" style="width:10%%"/>
                 </group>
               </page>
             </notebook>
