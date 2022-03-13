@@ -3,9 +3,9 @@
         <field name="name">Informe trabajadores por tienda</field>
         <field name="model">tiendas.trabajador</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">tiendas.trabajador_report_view</field>
-        <field name="report_file">tiendas.trabajador_report</field>
-        <field name="binding_model_id" ref="model_tiendas_trabajador"/>
+        <field name="report_name">tiendas.tienda_report_view</field>
+        <field name="report_file">tiendas.tienda_report</field>
+        <field name="binding_model_id" ref="model_tiendas_tienda"/>
         <field name="binding_type">report</field>
     </record>
 
@@ -15,6 +15,7 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>INFORME</h2>
+                        <h3 t-field="tienda.nombreTienda"/>
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
