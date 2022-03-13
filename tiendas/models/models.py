@@ -27,7 +27,7 @@ class trabajador(models.Model):
     edad = fields.Integer('Edad', compute='_getEdad')
     #relaccion
     tienda_id = fields.Many2one('tiendas.tienda', string="Tienda")
-    camion_id = fields.One2many('rutas.camion','trabajador_id2')
+    camion_id = fields.Many2one('rutas.camion',string="Camion")
     #validacion
 
     @api.constrains('dniTrabajador')
